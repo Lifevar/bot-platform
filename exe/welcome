@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'bot_platform'
+
+puts BotPlatform.greet
