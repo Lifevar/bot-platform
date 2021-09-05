@@ -1,6 +1,8 @@
 ##
 *This Project is still underconstruction.*
 
+![One Bot, Multiple Channels!](https://github.com/Lifevar/bot-platform/blob/main/images/bot-platform.png)
+
 # Bot Platform (Ruby Version)
 
 A ruby based Bot platform to let developers to focus on bot's business logic ONLY. You can connect your bot to channels such as slack, teams, lineworks, chatwork and etc within only a few steps of settings(without coding) to use the same bot's logic. check the [supported bot channels](https://github.com/lifevar/bot-platform/blob/main/docs/channels.md#supported).
