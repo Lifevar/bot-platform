@@ -31,11 +31,12 @@ Or install it yourself as:
 
 ## Usage
 
-bin/cli samples/echo.rb
+    $ bin/cli samples/echo.rb
+
 
 or
 
-bin/cli samples/dialogs/dialog_simple.rb
+    $ bin/cli samples/dialogs/dialog_simple.rb
 
 ## Development
 
