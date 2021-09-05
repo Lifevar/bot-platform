@@ -1,15 +1,16 @@
 ##
-This Project is still underconstruction.
+*This Project is still underconstruction.*
 
-# BotPlat form
+# Bot Platform (Ruby Version)
 
-A ruby based Bot platform to let developers to focus on bot's business logic. You can connect your bot to channels such as slack, teams, lineworks, chatwork and etc with only a few steps while the bot's logic is the same. check the [supported bot channels](https://github.com/lifevar/bot-platform/blob/main/docs/channels.md#supported).
+A ruby based Bot platform to let developers to focus on bot's business logic ONLY. You can connect your bot to channels such as slack, teams, lineworks, chatwork and etc within only a few steps of settings(without coding) to use the same bot's logic. check the [supported bot channels](https://github.com/lifevar/bot-platform/blob/main/docs/channels.md#supported).
 
-We also provide CLI(also as a channel) to accelerate the test and demo processes.
+We also provide CLI(Command Line Interface) to accelerate the testing and demo processes.
 
 You can use DemoKit(underconstruction) to support your bot conversations to customers.
 
-We reference Microsoft's BotFramework now, but we'll change the platform to be better in furture.
+
+We reference Microsoft's BotFramework now(great thanking to MS), but we'll change the platform to be more different and better in the furture. The big difference between this project and BotFramework is that you need not binding the bot to Azure or sth. else specified platform.
 
 
 ## Installation
