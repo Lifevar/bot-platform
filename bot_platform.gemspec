@@ -5,11 +5,12 @@ require_relative "lib/bot_platform/version"
 Gem::Specification.new do |spec|
   spec.name          = "bot_platform"
   spec.version       = BotPlatform::VERSION
+  spec.licenses      = ['MIT']
   spec.authors       = ["Ningfeng Yang"]
   spec.email         = ["nf.yang@lifevar.com"]
 
   spec.summary       = "A ruby-based bot platform"
-  spec.description   = "simply write bot codes"
+  spec.description   = "One bot, multiple channels supported"
   spec.homepage      = "https://github.com/lifevar/bot-platform"
   spec.required_ruby_version = ">= 3.0.2"
 
