@@ -3,7 +3,7 @@ in underconstruction. just wait a few days.
 
 # BotPlatform
 
-A ruby based Bot platform to let developers to focus on bot's business logic. You can connect your bot to channels such as slack, teams, lineworks, chatwork and etc. check the [supported bot channels](https://github.com/lifevar/bot-platform/docs/channels.md#supported).
+A ruby based Bot platform to let developers to focus on bot's business logic. You can connect your bot to channels such as slack, teams, lineworks, chatwork and etc. check the [supported bot channels](https://github.com/lifevar/bot-platform/blob/main/docs/channels.md#supported).
 
 We also provide shell interface(also as a channel) to accelerate the test and demo processes.
 
