@@ -3,27 +3,29 @@
 module BotPlatform
   module Dialogs
     class DialogSet
+      include BotPlatform::Asserts
+
       attr_accessor :dialogs, :dialog_state
 
-      def initialize(dialog_state)
-        
-        BotAssert.dialog_state_is_not_null dialog_state
-        @dialog_state = dialog_state
+      def initialize()
+#        assert_dialog_state_is_not_null dialog_state
+#        @dialog_state = dialog_state
+        @dialog_state = BotPlatform::Dialogs::DialogState.new
         @dialogs = {}
       end
 
       def add(dialog)
-        BotAssert.dialog_is_valid dialog
-        BotAssert.dialog_is_uniq @dialogs, dialog.id 
+        assert_dialog_is_valid dialog
+        assert_dialog_is_uniq @dialogs, dialog.id
 
         @dialogs[dialog.id.to_sym] = dialog
         return self
       end
 
       def create_dialog_context(turn_context)
-        BotAssert.turn_context_is_valid turn_context
+        assert_turn_context_is_valid turn_context
 
-        state = @dialog_state.get turn_context
+        state = @dialog_state
 
         return DialogContext.new self, turn_context, state
       end

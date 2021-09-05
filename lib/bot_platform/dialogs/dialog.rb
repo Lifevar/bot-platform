@@ -3,16 +3,21 @@
 module BotPlatform
   module Dialogs
     class Dialog
-      attr_reader :dialog_id
+      include BotPlatform::Asserts
+      END_OF_TURN = "end_of_turn".freeze
+
+      attr_reader :id
 
       def initialize(dialog_id)
-        BotAssert.dialog_id_not_empty dialog_id
+        assert_dialog_id_is_valid dialog_id
 
         @id = dialog_id
       end
 
+      # abstract
       # start the instance when ready
-      def start
+      def start(dc)
+        raise "unimplemented"
       end
 
       # called after user has new activity
@@ -23,20 +28,20 @@ module BotPlatform
         return dc.stop
       end
 
-      # called after dialog was interrupted
+      # called after pre-dialog was poped
       # params:
       #   dc: DialogContext
-      def resume(dc)
+      def resume(dc, result)
         # by default just stop the dialog
-        stop
+        stop result
       end
 
       # not-implemented
-      def reprompt
+      def reprompt(turn_context, instance)
       end
 
       # called by #DialogContext#stop_active_dialog if need to stop dialog
-      def stop
+      def stop(result)
       end
     end
   end
