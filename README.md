@@ -29,20 +29,49 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install bot_platform
+```bash
+$ gem install bot_platform
+```
 
 ## Usage
 
-    $ bin/cli samples/echo.rb
+Documents are under-construction.
 
+## Demos
 
-or
+### CLI
 
-    $ bin/cli samples/dialogs/dialog_simple.rb
+Clone this repository first. Go to the root directory and run:
+
+```bash
+bin/cli [bot-script]
+```
+
+echo sample:
+
+```bash
+$ bin/cli samples/echo.rb
+```
+
+simple dialog sample:
+
+```bash
+$ bin/cli samples/dialogs/dialog_simple.rb
+```
+
+waterfall dialog sample:
+
+```bash
+$ bin/cli samples/dialogs/waterfall_dialogs.rb
+```
+
+You can use 'exit' to quit bot shell. You can write your own bot scripts, be careful the file's name should be snake format.(We guess the class name from the file's name)
 
 ## Development
 
-We're working on both console bot and Line Works bot nowtime. 
+We're working on both console bot and Line Works bot nowtime and has plan to develop to other channels.
+
+It's welcome to share your channel's code to us.
 
 ## Contributing
 

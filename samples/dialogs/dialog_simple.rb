@@ -12,12 +12,13 @@ class DialogSimple
   def on_turn(ctx)
     dialog_ctx = @dialogs.create_dialog_context(ctx)
     results = dialog_ctx.continue_dialog
-    options = BotPlatform::Dialogs::Prompts::PromptOptions.new
-    options.prompt = BotPlatform::MessageFactory.Text("Input your name please:")
+
     if results.status == :empty
       dialog_ctx.prompt(
         "name",
-        options
+        BotPlatform::Dialogs::Prompts::PromptOptions.new(
+          prompt: BotPlatform::MessageFactory.Text("Input your name please:")
+        )
       )
     elsif results.status == :complete
       unless results.result.nil?

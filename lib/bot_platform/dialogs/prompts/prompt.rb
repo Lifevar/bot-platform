@@ -20,7 +20,7 @@ module BotPlatform
           state[:state] = {}
 
           on_prompt(dc.turn_context, state[:state], state[:options], false)
-          return BotPlatform::Dialogs::DialogResult.new :complete
+          return BotPlatform::Dialogs::DialogResult.new :end_of_turn
         end
 
         def continue(dc)
@@ -49,15 +49,17 @@ module BotPlatform
           if is_valid
             return dc.stop_dialog(recognized.value)
           else
-            return on_prompt(dc.turn_context, state, options, true)
+            on_prompt(dc.turn_context, state, options, true)
           end
+
+          return BotPlatform::Dialogs::DialogResult.new :end_of_turn
         end
 
         def resume(dc, result=null)
           assert_dialog_context_is_valid dc
 
           reprompt(dc.turn_context, dc.active_dialog)
-          return BotPlatform::Dialogs::DialogResult.new :complete
+          return BotPlatform::Dialogs::DialogResult.new :end_of_turn
         end
 
         def repromp(ttx, instance)

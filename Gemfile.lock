@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bot_platform (0.2.3)
+    bot_platform (0.3.0)
 
 GEM
   remote: https://rubygems.org/

@@ -7,6 +7,7 @@ module BotPlatform
         :empty => 0,
         :complete => 1,
         :canceled => 2,
+        :end_of_turn => 3,
       }
 
       attr_reader :status, :result

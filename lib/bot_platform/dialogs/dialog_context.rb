@@ -52,15 +52,20 @@ module BotPlatform
         return DialogResult.new :empty
       end
 
-      def stop_dialog(result)
+      def stop_dialog(result=nil)
+
         if @dialog_stack.any?
           @dialog_stack.pop
         end
-        dialog = active_dialog
+
+        instance = active_dialog
 
         #previous dialog
-        if dialog
-          dialog.resume self
+        if !instance.nil?
+          dialog = @dialogs.find instance.dialog_id
+          if dialog
+            return dialog.resume self, DialogReason::END_CALLED, result
+          end
         else
           return DialogResult.new :complete, result
         end

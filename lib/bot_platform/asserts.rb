@@ -34,6 +34,10 @@ module BotPlatform
       raise "dialog is aready added" if !hash[id.to_sym].nil?
     end
 
+    def assert_waterfall_step_context_is_valid(ctx)
+      raise "Waterfall Step Context is not valid" if ctx.nil? || !(ctx.is_a? Dialogs::WaterfallStepContext)
+    end
+
     def assert_activity_is_not_null(activity)
       raise "activity cannot be null" if activity.nil?
     end

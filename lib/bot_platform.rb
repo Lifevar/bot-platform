@@ -12,6 +12,7 @@ require_relative "bot_platform/storage/storageable"
 require_relative "bot_platform/storage/memory_storage"
 require_relative "bot_platform/state/bot_state"
 require_relative "bot_platform/state/conversation_state"
+require_relative "bot_platform/state/user_state"
 
 module BotPlatform
   class Error < StandardError; end
